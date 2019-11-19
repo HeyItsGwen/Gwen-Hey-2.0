@@ -1,0 +1,78 @@
+@import './variables';
+@import './mixins';
+
+* {
+  box-sizing: border-box;
+  font-family: $sans-serif;
+}
+
+body {
+  background-color: $body-background;
+}
+
+header {
+
+  @include flexCenterBoth;
+  height: 100vh;
+  min-height: 600px;
+  justify-content: space-around;
+  max-width: 1250px;
+  margin: auto;
+  
+  div {
+    background-color: body-background;
+    border: 6px solid $big-border;
+    height: 250px;
+    width: 400px;
+
+    h1 {
+      @include top-box-text;
+      font-weight: 700;
+      left: -90px;
+      margin-top: 20px;
+      position: relative;
+      padding: 10px;
+      
+      span {
+        position: relative;
+        left: -1500px;
+        animation: topH1Move 0.6s forwards ease-out;
+      }
+    }
+
+    p {
+      @include top-box-text;
+      font-size: 1.1em;
+      position: relative;
+      right: -50px;
+      top: 20px;
+      text-align: right;
+      width: 100%;
+      padding: 10px;
+      color: $body-background;
+
+      span {
+        animation: topPShow 0.5s forwards ease-in-out;
+      }
+    }
+    
+    @keyframes topH1Move {
+      100% {
+        left: 0;
+      }
+    }
+  
+    @keyframes topPShow {
+      100% {
+        color: $main-font-color;
+      }
+    }
+  }
+
+  nav {
+    border: 6px solid $big-border;
+    width: 100px;
+    height: 250px;
+  }
+
+}

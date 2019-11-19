@@ -1,1 +1,100 @@
-/* No CSS *//*# sourceMappingURL=style.css.map */
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Arial Black", sans-serif;
+}
+
+body {
+  background-color: #f8ffff;
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
+  min-height: 600px;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  max-width: 1250px;
+  margin: auto;
+}
+
+header div {
+  background-color: body-background;
+  border: 6px solid #2e2e2e;
+  height: 250px;
+  width: 400px;
+}
+
+header div h1 {
+  background-color: #f8ffff;
+  display: inline-block;
+  font-weight: 700;
+  left: -90px;
+  margin-top: 20px;
+  position: relative;
+  padding: 10px;
+}
+
+header div h1 span {
+  position: relative;
+  left: -1500px;
+  -webkit-animation: topH1Move 0.6s forwards ease-out;
+          animation: topH1Move 0.6s forwards ease-out;
+}
+
+header div p {
+  background-color: #f8ffff;
+  display: inline-block;
+  font-size: 1.1em;
+  position: relative;
+  right: -50px;
+  top: 20px;
+  text-align: right;
+  width: 100%;
+  padding: 10px;
+  color: #f8ffff;
+}
+
+header div p span {
+  -webkit-animation: topPShow 0.5s forwards ease-in-out;
+          animation: topPShow 0.5s forwards ease-in-out;
+}
+
+@-webkit-keyframes topH1Move {
+  100% {
+    left: 0;
+  }
+}
+
+@keyframes topH1Move {
+  100% {
+    left: 0;
+  }
+}
+
+@-webkit-keyframes topPShow {
+  100% {
+    color: #2e2e2e;
+  }
+}
+
+@keyframes topPShow {
+  100% {
+    color: #2e2e2e;
+  }
+}
+
+header nav {
+  border: 6px solid #2e2e2e;
+  width: 100px;
+  height: 250px;
+}
+/*# sourceMappingURL=style.css.map */

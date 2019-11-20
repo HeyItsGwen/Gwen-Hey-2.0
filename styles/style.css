@@ -1,7 +1,7 @@
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  font-family: "Arial Black", sans-serif;
+  font-family: Arial, sans-serif;
 }
 
 body {
@@ -18,10 +18,8 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 100vh;
+  height: 80vh;
   min-height: 600px;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
   max-width: 1250px;
   margin: auto;
 }
@@ -31,9 +29,12 @@ header div {
   border: 6px solid #2e2e2e;
   height: 250px;
   width: 400px;
+  margin-right: 125px;
+  position: relative;
+  top: -70px;
 }
 
-header div h1 {
+header div .topH1First {
   background-color: #f8ffff;
   display: inline-block;
   font-weight: 700;
@@ -43,19 +44,60 @@ header div h1 {
   padding: 10px;
 }
 
-header div h1 span {
+header div .topH1First span {
   position: relative;
   left: -1500px;
-  -webkit-animation: topH1Move 0.6s forwards ease-out;
-          animation: topH1Move 0.6s forwards ease-out;
+  -webkit-animation: h1Slide 0.5s forwards ease-in-out;
+          animation: h1Slide 0.5s forwards ease-in-out;
 }
 
-header div p {
+header div #topPChange {
+  position: relative;
+  color: #f8ffff;
+  font-weight: 700;
+  font-size: 1.8em;
+  width: 150px;
+  top: -62px;
+  right: -200px;
+  margin-bottom: -60px;
+}
+
+@-webkit-keyframes orangeTopFade1 {
+  15%, 85% {
+    color: #ffa704;
+  }
+  100% {
+    color: #f8ffff;
+  }
+}
+
+@keyframes orangeTopFade1 {
+  15%, 85% {
+    color: #ffa704;
+  }
+  100% {
+    color: #f8ffff;
+  }
+}
+
+@-webkit-keyframes h1Slide {
+  100% {
+    left: 0;
+  }
+}
+
+@keyframes h1Slide {
+  100% {
+    left: 0;
+  }
+}
+
+header div .topBoxInfo {
   background-color: #f8ffff;
   display: inline-block;
   font-size: 1.1em;
   position: relative;
-  right: -50px;
+  right: -70px;
   top: 20px;
   text-align: right;
   width: 100%;
@@ -63,21 +105,9 @@ header div p {
   color: #f8ffff;
 }
 
-header div p span {
-  -webkit-animation: topPShow 0.5s forwards ease-in-out;
-          animation: topPShow 0.5s forwards ease-in-out;
-}
-
-@-webkit-keyframes topH1Move {
-  100% {
-    left: 0;
-  }
-}
-
-@keyframes topH1Move {
-  100% {
-    left: 0;
-  }
+header div .topBoxInfo span {
+  -webkit-animation: topPShow 0.7s forwards ease-in-out;
+          animation: topPShow 0.7s forwards ease-in-out;
 }
 
 @-webkit-keyframes topPShow {
@@ -94,7 +124,47 @@ header div p span {
 
 header nav {
   border: 6px solid #2e2e2e;
-  width: 100px;
   height: 250px;
+  position: relative;
+  top: 13px;
+}
+
+header nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding: 25px 20px;
+}
+
+header nav ul li {
+  list-style-type: none;
+  text-align: left;
+  width: 100%;
+}
+
+header nav ul li a {
+  color: #2e2e2e;
+}
+
+header nav ul li a:hover {
+  color: #ffa704;
+  text-decoration: none;
+}
+
+header nav ul li a span {
+  color: #ffa704;
 }
 /*# sourceMappingURL=style.css.map */

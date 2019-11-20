@@ -13,9 +13,8 @@ body {
 header {
 
   @include flexCenterBoth;
-  height: 100vh;
+  height: 80vh;
   min-height: 600px;
-  justify-content: space-around;
   max-width: 1250px;
   margin: auto;
   
@@ -24,8 +23,11 @@ header {
     border: 6px solid $big-border;
     height: 250px;
     width: 400px;
+    margin-right: 125px;
+    position: relative;
+    top: -70px;
 
-    h1 {
+    .topH1First {
       @include top-box-text;
       font-weight: 700;
       left: -90px;
@@ -36,15 +38,42 @@ header {
       span {
         position: relative;
         left: -1500px;
-        animation: topH1Move 0.6s forwards ease-out;
+        animation: h1Slide 0.5s forwards ease-in-out;
       }
     }
 
-    p {
+    #topPChange {
+      position: relative;
+      color: $body-background;
+      font-weight: 700;
+      font-size: 1.8em;
+      width: 150px;
+      top: -62px;
+      right: -200px;
+      margin-bottom: -60px;
+
+      @keyframes orangeTopFade1 {
+        15%, 85% {
+          color: $border-highlight-color;
+        } 100% {
+          color: $body-background;
+
+        }
+      }
+
+      @keyframes h1Slide {
+        100% {
+          left: 0;
+        }
+      }
+
+    }
+
+    .topBoxInfo {
       @include top-box-text;
       font-size: 1.1em;
       position: relative;
-      right: -50px;
+      right: -70px;
       top: 20px;
       text-align: right;
       width: 100%;
@@ -52,13 +81,7 @@ header {
       color: $body-background;
 
       span {
-        animation: topPShow 0.5s forwards ease-in-out;
-      }
-    }
-    
-    @keyframes topH1Move {
-      100% {
-        left: 0;
+        animation: topPShow 0.7s forwards ease-in-out;
       }
     }
   
@@ -71,8 +94,36 @@ header {
 
   nav {
     border: 6px solid $big-border;
-    width: 100px;
     height: 250px;
+    position: relative;
+    top: 13px;
+
+    ul {
+      @include flexCenterBoth;
+      height: 100%;
+      flex-direction: column;
+      justify-content: space-around;
+      padding: 25px 20px;
+
+      li {
+        list-style-type: none;
+        text-align: left;
+        width: 100%;
+
+        a {
+          color: $main-font-color;
+        
+          &:hover {
+            color: $border-highlight-color;
+            text-decoration: none;
+          }
+
+          span {
+            color: $border-highlight-color;
+          }
+        }
+      }
+    }
   }
 
 }

@@ -13,14 +13,13 @@ body {
 header {
 
   @include flexCenterBoth;
-  height: 80vh;
-  min-height: 600px;
   max-width: 1250px;
-  margin: auto;
+  min-height: 70vh;
+  margin: auto auto 100px auto;
   
-  div {
+  #nameBox {
     background-color: body-background;
-    border: 6px solid $big-border;
+    @include big-border;
     height: 250px;
     width: 400px;
     margin-right: 125px;
@@ -92,11 +91,16 @@ header {
     }
   }
 
-  nav {
-    border: 6px solid $big-border;
+  #topNav {
+    @include big-border;
     height: 250px;
     position: relative;
     top: 13px;
+    display: flex;
+    justify-content: flex-end;
+    background-color: $body-background;
+
+    transition: width 1s, position 1s, height 0.3s ease-out, top 1s;
 
     ul {
       @include flexCenterBoth;
@@ -105,10 +109,13 @@ header {
       justify-content: space-around;
       padding: 25px 20px;
 
+      transition: flex-direction 1s, justify-content 1s;
+
       li {
         list-style-type: none;
         text-align: left;
-        width: 100%;
+
+        transition: width 1s, text-align 1s;
 
         a {
           color: $main-font-color;
@@ -123,6 +130,78 @@ header {
           }
         }
       }
+    }
+  }
+
+}
+
+main {
+  width: 100%;
+
+  #about {
+    @include flexCenterBoth;
+    width: 100%;
+    justify-content: space-between;
+
+    #pointyContainer {
+      @include flexCenterBoth;
+      flex-direction: column;
+      width: 40%;
+      max-width: 583px;
+      height: 520px;
+      overflow-x: hidden;
+
+      div {
+        @include big-border;
+        display: inline-flex;
+        position: relative;
+        left: 50%;
+
+        &:nth-child(1){
+          height: 250px;
+          width: 250px;
+          background-color: white;
+          transform: rotate(45deg);
+          z-index: 2;
+          @include flexCenterBoth;
+
+          h1 {
+            position: relative;
+            left: -35px;
+            top: 90px;
+            font-weight: bold;
+          }
+        }
+
+        &:nth-child(2){
+          height: 60px;
+          width: 60px;
+          background-color: white;
+          transform: rotate(45deg);
+          z-index: 0;
+          position: relative;
+          top: -22px;
+          left: 45%;
+        }
+
+        &:nth-child(3){
+          height: 100px;
+          width: 100px;
+          background-color: white;
+          transform: rotate(45deg);
+          z-index: 1;
+          position: relative;
+          top: -75px;
+        }
+      }
+    }
+
+    #aboutBox {
+      width: 60%;
+      height: 70%;
+      @include flexCenterBoth;
+      justify-content: flex-start;
+      flex-direction: column;
     }
   }
 

@@ -5,7 +5,7 @@
 }
 
 body {
-  background-color: #f8ffff;
+  background-color: #f4feff;
 }
 
 header {
@@ -18,13 +18,12 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 80vh;
-  min-height: 600px;
   max-width: 1250px;
-  margin: auto;
+  min-height: 70vh;
+  margin: auto auto 100px auto;
 }
 
-header div {
+header #nameBox {
   background-color: body-background;
   border: 6px solid #2e2e2e;
   height: 250px;
@@ -34,8 +33,8 @@ header div {
   top: -70px;
 }
 
-header div .topH1First {
-  background-color: #f8ffff;
+header #nameBox .topH1First {
+  background-color: #f4feff;
   display: inline-block;
   font-weight: 700;
   left: -90px;
@@ -44,16 +43,16 @@ header div .topH1First {
   padding: 10px;
 }
 
-header div .topH1First span {
+header #nameBox .topH1First span {
   position: relative;
   left: -1500px;
   -webkit-animation: h1Slide 0.5s forwards ease-in-out;
           animation: h1Slide 0.5s forwards ease-in-out;
 }
 
-header div #topPChange {
+header #nameBox #topPChange {
   position: relative;
-  color: #f8ffff;
+  color: #f4feff;
   font-weight: 700;
   font-size: 1.8em;
   width: 150px;
@@ -67,7 +66,7 @@ header div #topPChange {
     color: #ffa704;
   }
   100% {
-    color: #f8ffff;
+    color: #f4feff;
   }
 }
 
@@ -76,7 +75,7 @@ header div #topPChange {
     color: #ffa704;
   }
   100% {
-    color: #f8ffff;
+    color: #f4feff;
   }
 }
 
@@ -92,8 +91,8 @@ header div #topPChange {
   }
 }
 
-header div .topBoxInfo {
-  background-color: #f8ffff;
+header #nameBox .topBoxInfo {
+  background-color: #f4feff;
   display: inline-block;
   font-size: 1.1em;
   position: relative;
@@ -102,10 +101,10 @@ header div .topBoxInfo {
   text-align: right;
   width: 100%;
   padding: 10px;
-  color: #f8ffff;
+  color: #f4feff;
 }
 
-header div .topBoxInfo span {
+header #nameBox .topBoxInfo span {
   -webkit-animation: topPShow 0.7s forwards ease-in-out;
           animation: topPShow 0.7s forwards ease-in-out;
 }
@@ -122,14 +121,23 @@ header div .topBoxInfo span {
   }
 }
 
-header nav {
+header #topNav {
   border: 6px solid #2e2e2e;
   height: 250px;
   position: relative;
   top: 13px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  background-color: #f4feff;
+  -webkit-transition: width 1s, position 1s, height 0.3s ease-out, top 1s;
+  transition: width 1s, position 1s, height 0.3s ease-out, top 1s;
 }
 
-header nav ul {
+header #topNav ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -147,24 +155,147 @@ header nav ul {
   -ms-flex-pack: distribute;
       justify-content: space-around;
   padding: 25px 20px;
+  -webkit-transition: flex-direction 1s, -webkit- 2009flex-direction 1s, -webkit-box-pack 1s;
+  transition: flex-direction 1s, -webkit- 2009flex-direction 1s, -webkit-box-pack 1s;
+  transition: flex-direction 1s, justify-content 1s;
+  transition: flex-direction 1s, justify-content 1s, -webkit- 2009flex-direction 1s, -ms-flex-direction 1s, -webkit-box-pack 1s, -ms-flex-pack 1s;
 }
 
-header nav ul li {
+header #topNav ul li {
   list-style-type: none;
   text-align: left;
-  width: 100%;
+  -webkit-transition: width 1s, text-align 1s;
+  transition: width 1s, text-align 1s;
 }
 
-header nav ul li a {
+header #topNav ul li a {
   color: #2e2e2e;
 }
 
-header nav ul li a:hover {
+header #topNav ul li a:hover {
   color: #ffa704;
   text-decoration: none;
 }
 
-header nav ul li a span {
+header #topNav ul li a span {
   color: #ffa704;
+}
+
+main {
+  width: 100%;
+}
+
+main #about {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+main #about #pointyContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 40%;
+  max-width: 583px;
+  height: 520px;
+  overflow-x: hidden;
+}
+
+main #about #pointyContainer div {
+  border: 6px solid #2e2e2e;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  position: relative;
+  left: 50%;
+}
+
+main #about #pointyContainer div:nth-child(1) {
+  height: 250px;
+  width: 250px;
+  background-color: white;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  z-index: 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main #about #pointyContainer div:nth-child(1) h1 {
+  position: relative;
+  left: -35px;
+  top: 90px;
+  font-weight: bold;
+}
+
+main #about #pointyContainer div:nth-child(2) {
+  height: 60px;
+  width: 60px;
+  background-color: white;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  z-index: 0;
+  position: relative;
+  top: -22px;
+  left: 45%;
+}
+
+main #about #pointyContainer div:nth-child(3) {
+  height: 100px;
+  width: 100px;
+  background-color: white;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  z-index: 1;
+  position: relative;
+  top: -75px;
+}
+
+main #about #aboutBox {
+  width: 60%;
+  height: 70%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 /*# sourceMappingURL=style.css.map */

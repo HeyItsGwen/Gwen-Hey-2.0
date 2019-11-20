@@ -8,3 +8,7 @@
   justify-content: center;
   align-items: center;
 }
+
+@mixin big-border {
+  border: 6px solid $big-border;
+}

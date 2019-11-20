@@ -20,6 +20,10 @@ header {
   max-width: 1250px;
   min-height: 70vh;
   margin: auto auto 100px auto;
+
+  @media only screen and (max-width: 800px) {
+    flex-direction: column;
+  }
   
   #nameBox {
     background-color: $body-background;
@@ -29,6 +33,11 @@ header {
     margin-right: 125px;
     position: relative;
     top: -70px;
+
+    @media only screen and (max-width: 800px) {
+      margin: auto;
+      top: 0;
+    }
 
     .topH1First {
       @include top-box-text;
@@ -107,6 +116,10 @@ header {
 
     transition: width 1s, position 1s, height 0.2s ease-out;
 
+    @media only screen and (max-width: 800px) {
+      top: -40px;
+    }
+
     ul {
       @include flexCenterBoth;
       height: 100%;
@@ -177,18 +190,13 @@ main {
       }
 
       &:nth-child(3) {
-        height: 100px;
-        width: 100px;
-        background-color: white;
-        transform: rotate(45deg);
-        z-index: 1;
-        position: relative;
-        top: -75px;
+        @include pointyNthThree;
       }
     }
   }
 
   #pointyContainerLeft {
+    @include flexCenterBoth;
     @include pointyContainer;
     
     div {
@@ -200,11 +208,23 @@ main {
       &:nth-child(1) {
         @include pointyNthOne;
         @include flexCenterBoth;
-        @include nthOneH1;
+        
+        h1 {
+          @include nthOneH1;
+          left: 90px;
+          top: -20px;
+          transform: rotate(-90deg);
+        }
       }
 
       &:nth-child(2) {
+        @include pointyNthTwo;
+        top: -22px;
+        left: -45%;
+      }
 
+      &:nth-child(3) {
+        @include pointyNthThree;
       }
     }
   }

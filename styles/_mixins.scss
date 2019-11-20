@@ -12,3 +12,36 @@
 @mixin big-border {
   border: 6px solid $big-border;
 }
+
+@mixin sectionHolder {
+  width: 100%;
+  justify-content: space-between;
+}
+
+@mixin sectionBox {
+  width: 60%;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+
+@mixin pointyContainer {
+  flex-direction: column;
+  width: 40%;
+  max-width: 583px;
+  height: 520px;
+  overflow-x: hidden;
+}
+
+@mixin pointyNthOne {
+  height: 250px;
+  width: 250px;
+  background-color: white;
+  transform: rotate(45deg);
+  z-index: 2;
+}
+
+@mixin nthOneH1 {
+  font-weight: bold;
+  color: $border-highlight-color;
+  position: relative;
+}

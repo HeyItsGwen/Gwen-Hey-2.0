@@ -4,6 +4,10 @@
   font-family: Arial, sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: #f4feff;
 }
@@ -24,7 +28,7 @@ header {
 }
 
 header #nameBox {
-  background-color: body-background;
+  background-color: #f4feff;
   border: 6px solid #2e2e2e;
   height: 250px;
   width: 400px;
@@ -133,8 +137,9 @@ header #topNav {
       -ms-flex-pack: end;
           justify-content: flex-end;
   background-color: #f4feff;
-  -webkit-transition: width 1s, position 1s, height 0.3s ease-out, top 1s;
-  transition: width 1s, position 1s, height 0.3s ease-out, top 1s;
+  z-index: 5;
+  -webkit-transition: width 1s, position 1s, height 0.2s ease-out;
+  transition: width 1s, position 1s, height 0.2s ease-out;
 }
 
 header #topNav ul {
@@ -175,6 +180,7 @@ header #topNav ul li a {
 header #topNav ul li a:hover {
   color: #ffa704;
   text-decoration: none;
+  cursor: pointer;
 }
 
 header #topNav ul li a span {
@@ -185,23 +191,7 @@ main {
   width: 100%;
 }
 
-main #about {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 100%;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-main #about #pointyContainer {
+main #pointyContainerRight {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -221,7 +211,7 @@ main #about #pointyContainer {
   overflow-x: hidden;
 }
 
-main #about #pointyContainer div {
+main #pointyContainerRight div {
   border: 6px solid #2e2e2e;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -230,7 +220,7 @@ main #about #pointyContainer div {
   left: 50%;
 }
 
-main #about #pointyContainer div:nth-child(1) {
+main #pointyContainerRight div:nth-child(1) {
   height: 250px;
   width: 250px;
   background-color: white;
@@ -248,14 +238,15 @@ main #about #pointyContainer div:nth-child(1) {
           align-items: center;
 }
 
-main #about #pointyContainer div:nth-child(1) h1 {
-  position: relative;
+main #pointyContainerRight div:nth-child(1) h1 {
   left: -35px;
   top: 90px;
   font-weight: bold;
+  color: #ffa704;
+  position: relative;
 }
 
-main #about #pointyContainer div:nth-child(2) {
+main #pointyContainerRight div:nth-child(2) {
   height: 60px;
   width: 60px;
   background-color: white;
@@ -267,7 +258,7 @@ main #about #pointyContainer div:nth-child(2) {
   left: 45%;
 }
 
-main #about #pointyContainer div:nth-child(3) {
+main #pointyContainerRight div:nth-child(3) {
   height: 100px;
   width: 100px;
   background-color: white;
@@ -278,9 +269,33 @@ main #about #pointyContainer div:nth-child(3) {
   top: -75px;
 }
 
-main #about #aboutBox {
-  width: 60%;
-  height: 70%;
+main #pointyContainerLeft {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 40%;
+  max-width: 583px;
+  height: 520px;
+  overflow-x: hidden;
+}
+
+main #pointyContainerLeft div {
+  border: 6px solid #2e2e2e;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  position: relative;
+  left: -50%;
+}
+
+main #pointyContainerLeft div:nth-child(1) {
+  height: 250px;
+  width: 250px;
+  background-color: white;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  z-index: 2;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -290,6 +305,38 @@ main #about #aboutBox {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  font-weight: bold;
+  color: #ffa704;
+  position: relative;
+}
+
+main #about {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+main #about #aboutBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 60%;
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
@@ -297,5 +344,36 @@ main #about #aboutBox {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+main #projects {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+main #projects #projectBox {
+  width: 60%;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+footer {
+  height: 1000px;
 }
 /*# sourceMappingURL=style.css.map */

@@ -6,6 +6,10 @@
   font-family: $sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: $body-background;
 }
@@ -18,7 +22,7 @@ header {
   margin: auto auto 100px auto;
   
   #nameBox {
-    background-color: body-background;
+    background-color: $body-background;
     @include big-border;
     height: 250px;
     width: 400px;
@@ -99,8 +103,9 @@ header {
     display: flex;
     justify-content: flex-end;
     background-color: $body-background;
+    z-index: 5;
 
-    transition: width 1s, position 1s, height 0.3s ease-out, top 1s;
+    transition: width 1s, position 1s, height 0.2s ease-out;
 
     ul {
       @include flexCenterBoth;
@@ -123,6 +128,7 @@ header {
           &:hover {
             color: $border-highlight-color;
             text-decoration: none;
+            cursor: pointer;
           }
 
           span {
@@ -138,71 +144,92 @@ header {
 main {
   width: 100%;
 
-  #about {
+  #pointyContainerRight {
     @include flexCenterBoth;
-    width: 100%;
-    justify-content: space-between;
+    @include pointyContainer;
 
-    #pointyContainer {
-      @include flexCenterBoth;
-      flex-direction: column;
-      width: 40%;
-      max-width: 583px;
-      height: 520px;
-      overflow-x: hidden;
+    div {
+      @include big-border;
+      display: inline-flex;
+      position: relative;
+      left: 50%;
 
-      div {
-        @include big-border;
-        display: inline-flex;
-        position: relative;
-        left: 50%;
+      &:nth-child(1) {
+        @include pointyNthOne;
+        @include flexCenterBoth;
 
-        &:nth-child(1){
-          height: 250px;
-          width: 250px;
-          background-color: white;
-          transform: rotate(45deg);
-          z-index: 2;
-          @include flexCenterBoth;
-
-          h1 {
-            position: relative;
-            left: -35px;
-            top: 90px;
-            font-weight: bold;
-          }
-        }
-
-        &:nth-child(2){
-          height: 60px;
-          width: 60px;
-          background-color: white;
-          transform: rotate(45deg);
-          z-index: 0;
-          position: relative;
-          top: -22px;
-          left: 45%;
-        }
-
-        &:nth-child(3){
-          height: 100px;
-          width: 100px;
-          background-color: white;
-          transform: rotate(45deg);
-          z-index: 1;
-          position: relative;
-          top: -75px;
+        h1 {
+          left: -35px;
+          top: 90px;
+          @include nthOneH1;
         }
       }
-    }
 
-    #aboutBox {
-      width: 60%;
-      height: 70%;
-      @include flexCenterBoth;
-      justify-content: flex-start;
-      flex-direction: column;
+      &:nth-child(2) {
+        height: 60px;
+        width: 60px;
+        background-color: white;
+        transform: rotate(45deg);
+        z-index: 0;
+        position: relative;
+        top: -22px;
+        left: 45%;
+      }
+
+      &:nth-child(3) {
+        height: 100px;
+        width: 100px;
+        background-color: white;
+        transform: rotate(45deg);
+        z-index: 1;
+        position: relative;
+        top: -75px;
+      }
     }
   }
 
+  #pointyContainerLeft {
+    @include pointyContainer;
+    
+    div {
+      @include big-border;
+      display: inline-flex;
+      position: relative;
+      left: -50%;
+
+      &:nth-child(1) {
+        @include pointyNthOne;
+        @include flexCenterBoth;
+        @include nthOneH1;
+      }
+
+      &:nth-child(2) {
+
+      }
+    }
+  }
+
+  #about {
+    @include flexCenterBoth;
+    @include sectionHolder;
+
+    #aboutBox {
+      @include flexCenterBoth;
+      @include sectionBox
+    }
+  }
+
+  #projects {
+    @include flexCenterBoth;
+    @include sectionHolder;
+
+    #projectBox {
+      @include sectionBox
+    }
+  }
+
+}
+
+footer {
+  height: 1000px;
 }

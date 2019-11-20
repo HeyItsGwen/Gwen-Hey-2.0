@@ -1,0 +1,14 @@
+@mixin top-box-text {
+  background-color: $body-background;
+  display: inline-block;
+}
+
+@mixin flexCenterBoth {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin big-border {
+  border: 6px solid $big-border;
+}

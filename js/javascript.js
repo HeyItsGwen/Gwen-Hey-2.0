@@ -2,6 +2,7 @@ let topPAnim = document.getElementById('topPChange');
 let topNav = document.getElementById('topNav');
 let topNavUl = document.getElementById('topNavUl');
 let topNavli = document.getElementsByClassName('topNavli');
+let scrollPos = window.pageYOffset;
 
 let count = 0;
 
@@ -59,8 +60,6 @@ const navUnMove = () => {
     topNavUl.style.position = 'relative';
     topNavUl.style.top = '-5px';
 }
-
-let scrollPos = window.pageYOffset;
 
 window.onscroll = () => {
     if((window.pageYOffset) >= 140) {

@@ -45,3 +45,22 @@
   color: $border-highlight-color;
   position: relative;
 }
+
+@mixin pointyNthTwo {
+  height: 60px;
+  width: 60px;
+  background-color: white;
+  transform: rotate(45deg);
+  z-index: 0;
+  position: relative;
+}
+
+@mixin pointyNthThree {
+  height: 100px;
+  width: 100px;
+  background-color: white;
+  transform: rotate(45deg);
+  z-index: 1;
+  position: relative;
+  top: -75px;
+}

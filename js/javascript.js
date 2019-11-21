@@ -1,7 +1,12 @@
 let topPAnim = document.getElementById('topPChange');
 let topNav = document.getElementById('topNav');
 let topNavUl = document.getElementById('topNavUl');
-let topNavli = document.getElementsByClassName('topNavli');
+let topNavli = document.querySelector('.topNavli');
+
+let projectPoints1 = document.querySelector('.projectPoints1');
+let projectPoints2 = document.querySelector('.projectPoints2');
+let projectPoints3 = document.querySelector('.projectPoints3');
+
 let scrollPos = window.pageYOffset;
 
 let count = 0;
@@ -61,9 +66,16 @@ const navUnMove = () => {
     topNavUl.style.top = '-5px';
 }
 
+const projectPointMove = () => {
+    projectPoints1.style.left = '-50%';
+    projectPoints2.style.left = '-40%'; 
+    projectPoints3.style.left = '-50%'; 
+}
+
 window.onscroll = () => {
     if((window.pageYOffset) >= 140) {
         navMove();
+        projectPointMove();
     } else {
         navUnMove();
     }

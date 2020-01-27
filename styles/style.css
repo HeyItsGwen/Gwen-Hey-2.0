@@ -9,7 +9,8 @@ html {
 }
 
 body {
-  background-color: #f4feff;
+  background: -webkit-gradient(linear, left top, left bottom, from(#f4feff), color-stop(16%, #f4feff), color-stop(49%, #c4c4c4), color-stop(100%, #ccfaff), to(#00d4ff));
+  background: linear-gradient(to bottom, #f4feff 0%, #f4feff 16%, #c4c4c4 49%, #ccfaff 100%, #00d4ff 100%);
 }
 
 header {
@@ -24,7 +25,7 @@ header {
           align-items: center;
   max-width: 1250px;
   min-height: 70vh;
-  margin: auto;
+  margin: 100px auto;
 }
 
 @media only screen and (max-width: 800px) {
@@ -46,10 +47,17 @@ header #nameBox {
   top: -70px;
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 850px) {
   header #nameBox {
     margin: auto;
     top: 0;
+  }
+}
+
+@media only screen and (max-width: 414px) {
+  header #nameBox {
+    margin: auto;
+    left: -10px;
   }
 }
 
@@ -57,10 +65,23 @@ header #nameBox .topH1First {
   background-color: #f4feff;
   display: inline-block;
   font-weight: 700;
-  left: -90px;
+  left: -50px;
   margin-top: 20px;
   position: relative;
   padding: 10px;
+  background-color: #f4feff;
+}
+
+@media only screen and (max-width: 600px) {
+  header #nameBox .topH1First {
+    left: -25px;
+  }
+}
+
+@media only screen and (max-width: 414px) {
+  header #nameBox .topH1First {
+    left: -5px;
+  }
 }
 
 header #nameBox .topH1First span {
@@ -79,6 +100,24 @@ header #nameBox #topPChange {
   top: -62px;
   right: -200px;
   margin-bottom: -60px;
+}
+
+@media only screen and (max-width: 600px) {
+  header #nameBox #topPChange {
+    right: -230px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  header #nameBox #topPChange {
+    right: -240px;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  header #nameBox #topPChange {
+    right: -215px;
+  }
 }
 
 @-webkit-keyframes orangeTopFade1 {
@@ -122,6 +161,18 @@ header #nameBox .topBoxInfo {
   width: 100%;
   padding: 10px;
   color: #f4feff;
+}
+
+@media only screen and (max-width: 600px) {
+  header #nameBox .topBoxInfo {
+    right: 0px;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  header #nameBox .topBoxInfo {
+    width: 80%;
+  }
 }
 
 header #nameBox .topBoxInfo span {
@@ -249,6 +300,7 @@ main #pointyContainerRight div:nth-child(1) {
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
   z-index: 2;
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -318,6 +370,8 @@ main #pointyContainerLeft div {
   display: inline-flex;
   position: relative;
   left: -50%;
+  -webkit-transition: left 1s;
+  transition: left 1s;
 }
 
 main #pointyContainerLeft div:nth-child(1) {
@@ -327,6 +381,7 @@ main #pointyContainerLeft div:nth-child(1) {
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
   z-index: 2;
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -336,6 +391,7 @@ main #pointyContainerLeft div:nth-child(1) {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  left: -120%;
 }
 
 main #pointyContainerLeft div:nth-child(1) h1 {
@@ -357,7 +413,7 @@ main #pointyContainerLeft div:nth-child(2) {
   z-index: 0;
   position: relative;
   top: -22px;
-  left: -45%;
+  left: -80%;
 }
 
 main #pointyContainerLeft div:nth-child(3) {
@@ -369,6 +425,7 @@ main #pointyContainerLeft div:nth-child(3) {
   z-index: 1;
   position: relative;
   top: -75px;
+  left: -95%;
 }
 
 main #about {

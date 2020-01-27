@@ -11,7 +11,7 @@ html {
 }
 
 body {
-  background-color: $body-background;
+  background: $body-gradient;
 }
 
 header {
@@ -19,7 +19,7 @@ header {
   @include flexCenterBoth;
   max-width: 1250px;
   min-height: 70vh;
-  margin: auto;
+  margin: 100px auto;
 
   @media only screen and (max-width: 800px) {
     flex-direction: column;
@@ -34,24 +34,40 @@ header {
     position: relative;
     top: -70px;
 
-    @media only screen and (max-width: 800px) {
+    @media only screen and (max-width: 850px) {
       margin: auto;
       top: 0;
+    }
+
+    @media only screen and (max-width: 414px) {
+      margin: auto;
+      left: -10px;
     }
 
     .topH1First {
       @include top-box-text;
       font-weight: 700;
-      left: -90px;
+      left: -50px;
       margin-top: 20px;
       position: relative;
       padding: 10px;
+      background-color: $body-background;
+
+      @media only screen and (max-width: 600px) {
+        left: -25px;
+      }
+
+      @media only screen and (max-width: 414px) {
+        left: -5px;
+      }
+
       
       span {
         position: relative;
         left: -1500px;
         animation: h1Slide 0.5s forwards ease-in-out;
       }
+
     }
 
     #topPChange {
@@ -63,6 +79,18 @@ header {
       top: -62px;
       right: -200px;
       margin-bottom: -60px;
+
+      @media only screen and (max-width: 600px) {
+        right: -230px;
+      }
+
+      @media only screen and (max-width: 400px) {
+        right: -240px;
+      }
+
+      @media only screen and (max-width: 375px) {
+        right: -215px;
+      }
 
       @keyframes orangeTopFade1 {
         15%, 85% {
@@ -91,6 +119,14 @@ header {
       width: 100%;
       padding: 10px;
       color: $body-background;
+
+      @media only screen and (max-width: 600px) {
+        right: 0px;
+      }
+
+      @media only screen and (max-width: 375px) {
+        width: 80%;
+      }
 
       span {
         animation: topPShow 0.7s forwards ease-in-out;
@@ -206,9 +242,12 @@ main {
       position: relative;
       left: -50%;
 
+      transition: left 1s;
+
       &:nth-child(1) {
         @include pointyNthOne;
         @include flexCenterBoth;
+        left: -120%;
         
         h1 {
           @include nthOneH1;
@@ -221,11 +260,12 @@ main {
       &:nth-child(2) {
         @include pointyNthTwo;
         top: -22px;
-        left: -45%;
+        left: -80%;
       }
 
       &:nth-child(3) {
         @include pointyNthThree;
+        left: -95%;
       }
     }
   }

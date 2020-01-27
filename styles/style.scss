@@ -252,7 +252,7 @@ main {
       &:nth-child(1) {
         @include pointyNthOne;
         @include flexCenterBoth;
-        left: -120%;
+        left: -110%;
         
         h1 {
           @include nthOneH1;
@@ -265,12 +265,12 @@ main {
       &:nth-child(2) {
         @include pointyNthTwo;
         top: -22px;
-        left: -80%;
+        left: -75%;
       }
 
       &:nth-child(3) {
         @include pointyNthThree;
-        left: -95%;
+        left: -90%;
       }
     }
   }

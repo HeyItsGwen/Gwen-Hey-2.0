@@ -371,8 +371,9 @@ main .pointyContainerLeft div {
   display: -ms-inline-flexbox;
   display: inline-flex;
   position: relative;
-  left: -50%;
+  left: -100%;
   -webkit-transition: left 1s;
+  transition: left 1s;
   transition: left 1s;
 }
 
@@ -393,7 +394,7 @@ main .pointyContainerLeft div:nth-child(1) {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  left: -120%;
+  left: -110%;
 }
 
 main .pointyContainerLeft div:nth-child(1) h1 {
@@ -415,7 +416,7 @@ main .pointyContainerLeft div:nth-child(2) {
   z-index: 0;
   position: relative;
   top: -22px;
-  left: -80%;
+  left: -75%;
 }
 
 main .pointyContainerLeft div:nth-child(3) {
@@ -427,7 +428,7 @@ main .pointyContainerLeft div:nth-child(3) {
   z-index: 1;
   position: relative;
   top: -75px;
-  left: -95%;
+  left: -90%;
 }
 
 main #about {

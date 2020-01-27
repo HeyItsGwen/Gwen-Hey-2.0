@@ -20,6 +20,9 @@ header {
   max-width: 1250px;
   min-height: 70vh;
   margin: 100px auto;
+  height: 800px;
+  margin: auto;
+
 
   @media only screen and (max-width: 800px) {
     flex-direction: column;
@@ -194,7 +197,7 @@ header {
 main {
   width: 100%;
 
-  #pointyContainerRight {
+  .pointyContainerRight {
     @include flexCenterBoth;
     @include pointyContainer;
 
@@ -232,7 +235,7 @@ main {
     }
   }
 
-  #pointyContainerLeft {
+  .pointyContainerLeft {
     @include flexCenterBoth;
     @include pointyContainer;
     
@@ -240,7 +243,9 @@ main {
       @include big-border;
       display: inline-flex;
       position: relative;
-      left: -50%;
+      left: -100%;
+
+      transition: left 1s;
 
       transition: left 1s;
 

@@ -26,6 +26,8 @@ header {
   max-width: 1250px;
   min-height: 70vh;
   margin: 100px auto;
+  height: 800px;
+  margin: auto;
 }
 
 @media only screen and (max-width: 800px) {
@@ -264,7 +266,7 @@ main {
   width: 100%;
 }
 
-main #pointyContainerRight {
+main .pointyContainerRight {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -284,7 +286,7 @@ main #pointyContainerRight {
   overflow-x: hidden;
 }
 
-main #pointyContainerRight div {
+main .pointyContainerRight div {
   border: 6px solid #2e2e2e;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -293,7 +295,7 @@ main #pointyContainerRight div {
   left: 50%;
 }
 
-main #pointyContainerRight div:nth-child(1) {
+main .pointyContainerRight div:nth-child(1) {
   height: 250px;
   width: 250px;
   background-color: white;
@@ -312,7 +314,7 @@ main #pointyContainerRight div:nth-child(1) {
           align-items: center;
 }
 
-main #pointyContainerRight div:nth-child(1) h1 {
+main .pointyContainerRight div:nth-child(1) h1 {
   left: -35px;
   top: 90px;
   font-weight: bold;
@@ -320,7 +322,7 @@ main #pointyContainerRight div:nth-child(1) h1 {
   position: relative;
 }
 
-main #pointyContainerRight div:nth-child(2) {
+main .pointyContainerRight div:nth-child(2) {
   height: 60px;
   width: 60px;
   background-color: white;
@@ -332,7 +334,7 @@ main #pointyContainerRight div:nth-child(2) {
   left: 45%;
 }
 
-main #pointyContainerRight div:nth-child(3) {
+main .pointyContainerRight div:nth-child(3) {
   height: 100px;
   width: 100px;
   background-color: white;
@@ -343,7 +345,7 @@ main #pointyContainerRight div:nth-child(3) {
   top: -75px;
 }
 
-main #pointyContainerLeft {
+main .pointyContainerLeft {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -363,7 +365,7 @@ main #pointyContainerLeft {
   overflow-x: hidden;
 }
 
-main #pointyContainerLeft div {
+main .pointyContainerLeft div {
   border: 6px solid #2e2e2e;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -374,7 +376,7 @@ main #pointyContainerLeft div {
   transition: left 1s;
 }
 
-main #pointyContainerLeft div:nth-child(1) {
+main .pointyContainerLeft div:nth-child(1) {
   height: 250px;
   width: 250px;
   background-color: white;
@@ -394,7 +396,7 @@ main #pointyContainerLeft div:nth-child(1) {
   left: -120%;
 }
 
-main #pointyContainerLeft div:nth-child(1) h1 {
+main .pointyContainerLeft div:nth-child(1) h1 {
   font-weight: bold;
   color: #ffa704;
   position: relative;
@@ -404,7 +406,7 @@ main #pointyContainerLeft div:nth-child(1) h1 {
           transform: rotate(-90deg);
 }
 
-main #pointyContainerLeft div:nth-child(2) {
+main .pointyContainerLeft div:nth-child(2) {
   height: 60px;
   width: 60px;
   background-color: white;
@@ -416,7 +418,7 @@ main #pointyContainerLeft div:nth-child(2) {
   left: -80%;
 }
 
-main #pointyContainerLeft div:nth-child(3) {
+main .pointyContainerLeft div:nth-child(3) {
   height: 100px;
   width: 100px;
   background-color: white;

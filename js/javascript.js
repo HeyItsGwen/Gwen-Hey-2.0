@@ -68,12 +68,12 @@ const navUnMove = () => {
 
 const projectPointMove = () => {
     projectPoints1.style.left = '-50%';
-    projectPoints2.style.left = '-40%'; 
+    projectPoints2.style.left = '-45%'; 
     projectPoints3.style.left = '-50%'; 
 }
 
 window.onscroll = () => {
-    if((window.pageYOffset) >= 140) {
+    if((window.pageYOffset) >= 150) {
         navMove();
         projectPointMove();
     } else {
